@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <button type="button" class="btn btn-outline-success" onclick="saveReq()">글작성</button>
+    <button type="button" class="btn btn-outline-info" onclick = "listReq()">글목록</button>
+    <a href = "/board/save">글작성(링크)</a>
+</body>
+<script>
+    const saveReq = () => {
+        location.href = "/board/save";
+    }
+</script>
+<script>
+    const listReq = () => {
+        location.href = "/board/";
+    }
+</script>
+</html>
