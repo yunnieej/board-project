@@ -92,3 +92,24 @@ public class BoardService {
         return boardDTOS;
     }
 }
+
+/***
+ * MVC 패턴 - 1
+ * 고객 요청옴 -> Controller에서 비즈니스 로직 수행
+ * 로직 수행 후 -> Model에 데이터 담음
+ * 그 다음 view 로직으로 제어권을 넘김
+ * 그럼 뷰 로직이 model에 있는 데이터 참고 후 뷰를 그려줌
+ */
+/***
+ * MVC 패턴 -2
+ * 비즈니스 로직 -> 회원 저장, 주문 같은 것들..
+ * Service에 비즈니스 로직들이 작성됨
+ * 컨트롤러는 parameter 꺼내고 고객의 http 요청의 스펙 확인 -> 잘못되면  400 오류
+ * 잘 되면 service, repository 호출해서 data 저장이나 주문..
+ * 결과 받고 (ex. 조회한 회원 목록) model에 전달
+ */
+/***
+ * Model은 HttpServletRequest 객체 사용
+ * request.setAttribute(), request.getAttribute()
+ * 데이터 보관, 조회 가능
+ */
